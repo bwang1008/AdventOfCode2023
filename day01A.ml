@@ -12,8 +12,7 @@ let read_file (filename: string): string list =
         | None -> close_in ic; List.rev acc
     in
     read_all_lines []
-;;
-
+in
 let main () : int =
     let input: string list = read_file "inputs/day01.txt" in
     let process_line (line: string): int =
@@ -41,9 +40,7 @@ let main () : int =
         | line::tail -> (process_line line) + process_all_lines tail
     in
     process_all_lines input
-;;
-
-
+in
 let answer: int = main () in
 Printf.printf "answer = %d\n" answer;
 
