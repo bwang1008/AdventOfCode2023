@@ -1,3 +1,4 @@
+import time
 from pprint import pprint
 from typing import List, Tuple
 
@@ -152,4 +153,7 @@ def main() -> None:
 
 
 if __name__ == '__main__':
+    start_time = time.time()
     main()
+
+    logger.info(f'Took {time.time() - start_time}')
