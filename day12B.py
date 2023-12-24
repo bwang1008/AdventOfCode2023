@@ -191,7 +191,7 @@ def main() -> None:
 
         answer += try_all_possible_combinations(row, desired_groups)
 
-    logger.info(f"{answer=}")  # 0
+    logger.info(f"{answer=}")  # 527570479489
 
     logger.info(f"{num_times_called_recursive_function=}")
 
