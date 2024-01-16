@@ -59,7 +59,9 @@ def generate_intersection(
             vel_b[2] * t_b + pos_b[2],
         )
 
-        diff: Fraction = abs(projected_position_b[0] - projected_position_a[0]) + abs(projected_position_b[1] - projected_position_a[1])
+        diff: Fraction = abs(projected_position_b[0] - projected_position_a[0]) + abs(
+            projected_position_b[1] - projected_position_a[1]
+        )
 
         if diff == 0:
             return projected_position_a
@@ -97,9 +99,9 @@ def main() -> None:
 
     for i in range(len(hail)):
         for j in range(i + 1, len(hail)):
-            intersection: Optional[Tuple[Fraction, Fraction, Fraction]] = generate_intersection(
-                hail[i][0], hail[i][1], hail[j][0], hail[j][1]
-            )
+            intersection: Optional[
+                Tuple[Fraction, Fraction, Fraction]
+            ] = generate_intersection(hail[i][0], hail[i][1], hail[j][0], hail[j][1])
 
             if intersection is not None:
                 logger.debug(f"Hail {i} and {j} intersect at {intersection}")
